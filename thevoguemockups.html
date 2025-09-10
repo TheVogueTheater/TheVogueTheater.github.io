@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vogue - Mockups</title>
+    <link rel="stylesheet" href="./styles/mockupStyles.css">
+</head>
+<body>
+
+<div class="vogueHero">
+    <a href="./index.html"><img class="heroImg" src="./images/voguealtheronew.jpg"></a>
+</div>
+
+<div class="headerLinks">
+    <a class="headerLink" href="./thevogueaboutus.html">About</a>
+    <a class="headerLink" href="./thevogueconcessions.html">Concessions</a>
+    <a class="headerLink" href="./thevoguemembersclub.html">Members</a>
+    <a class="headerLink" href="./thevogueprivateviewings.html">Reserve</a>
+    <a class="headerLink" href="./thevoguemockups.html">Mockups</a>
+</div>
+
+<div class="spacer"></div>
+
+<div class="aboutUs">FIGMA MOCKUPS</div>
+<div class="spacer"></div>
+<div class="mockupsParagraph">These are a series of page mockups I created in Figma prior to coding the actual site. Some of them were translated fairly 1:1, others were changed drastically or even omitted. You can click the photos to view them individually, and click the titles of each section to navigate to their final version!</div>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="mockupRow">
+    <image class="figmaImg" src="./images/figma1.png"></image>
+    <div class="textDiv">
+        <div class="mockupTitle"><a class="mockupAnchors" href="./index.html">Homepage</a></div>
+        <div class="mockupText">
+        I liked the idea of having a hero image that was interacting with the title of the site, and ended up implementing a different one on every page in the coded version. I filled the movie section up with films I like, and it plays to the idea that the actual Vogue theater screened primarily niche films.
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="mockupRow">
+    <image class="figmaImg" src="./images/figma2.png"></image>
+    <div class="textDiv">
+        <div class="mockupTitle"><a class="mockupAnchors" href="./thevogueaboutus.html">About Us</a></div>
+        <div class="mockupText">
+        I wanted to have a page describing the theater and its history, but finding information on a theater that's been closed since 1998 proved difficult! I ended up using a different image for the final site and adding a section about their 'Rocky Horror Picture Show' events.
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="mockupRow">
+    <image class="figmaImg" src="./images/figma3.png"></image>
+    <div class="textDiv">
+        <div class="mockupTitle"><a class="mockupAnchors" href="./thevoguemembersclub.html">Member's Club</a></div>
+        <div class="mockupText">
+        I got the idea for the Member's Page from researching other movie websites. Having some kind of member's program seems to be a pretty common thing when it comes to other theater chains, so I wanted to do one of my own. I tried to make the pricing and perks seem competitive compared to what most national chains are offering.
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="mockupRow">
+    <image class="figmaImg" src="./images/figma4.png"></image>
+    <div class="textDiv">
+        <div class="mockupTitle"><a class="mockupAnchors" href="./thevogueconcessions.html">Coming Soon</a></div>
+        <div class="mockupText">
+        This page was a 'coming soon' for what the theater would be offering in future showings. However, I ended up replacing it with a concessions page in the final version because the similarities between the 'coming soon' page and the homepage were a bit too similar.
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="mockupRow">
+    <image class="figmaImg" src="./images/figma5.png"></image>
+    <div class="textDiv">
+        <div class="mockupTitle"><a class="mockupAnchors" href="./thevogueprivateviewings.html">Reservations</a></div>
+        <div class="mockupText">
+        The final page was for people who might want to rent a private theater viewing. Every webpage needed some a form section on it as a requirement, so I did my best to do something a bit more interesting than just a 'contact us' page for the site.
+        </div>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<a class="backToTop" href="#">Back to top</a>
+
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<div class="footer">
+    <p>The Vogue©</p><p>3727 Lexington Road, Louisville, KY 40206</p><p>(502) 000-0000</p>
+</div>
+
+<script>
+    const lightbox = document.createElement('div')
+    lightbox.id = 'lightbox'
+    document.body.appendChild(lightbox)
+
+    const images = document.querySelectorAll('.figmaImg')
+    images.forEach(image => {
+    image.addEventListener('click', e => {
+    lightbox.classList.add('active')
+    const img = document.createElement('img')
+    img.src = image.src
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(img)
+  })
+})
+
+    lightbox.addEventListener('click', e => {
+    if (e.target !== e.currentTarget) return
+    lightbox.classList.remove('active')
+})
+</script>
+</body>
+</html>
